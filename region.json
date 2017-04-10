@@ -1,0 +1,1532 @@
+[
+  {
+    "Ward": 1,
+    "Precinct": 1,
+    "Region": 1,
+    "WardPrecinct": 101
+  },
+  {
+    "Ward": 1,
+    "Precinct": 10,
+    "Region": 1,
+    "WardPrecinct": 110
+  },
+  {
+    "Ward": 1,
+    "Precinct": 11,
+    "Region": 1,
+    "WardPrecinct": 111
+  },
+  {
+    "Ward": 1,
+    "Precinct": 12,
+    "Region": 1,
+    "WardPrecinct": 112
+  },
+  {
+    "Ward": 1,
+    "Precinct": 13,
+    "Region": 1,
+    "WardPrecinct": 113
+  },
+  {
+    "Ward": 1,
+    "Precinct": 14,
+    "Region": 1,
+    "WardPrecinct": 114
+  },
+  {
+    "Ward": 1,
+    "Precinct": 15,
+    "Region": 1,
+    "WardPrecinct": 115
+  },
+  {
+    "Ward": 1,
+    "Precinct": 2,
+    "Region": 1,
+    "WardPrecinct": 102
+  },
+  {
+    "Ward": 1,
+    "Precinct": 3,
+    "Region": 1,
+    "WardPrecinct": 103
+  },
+  {
+    "Ward": 1,
+    "Precinct": 4,
+    "Region": 1,
+    "WardPrecinct": 104
+  },
+  {
+    "Ward": 1,
+    "Precinct": 5,
+    "Region": 1,
+    "WardPrecinct": 105
+  },
+  {
+    "Ward": 1,
+    "Precinct": 6,
+    "Region": 1,
+    "WardPrecinct": 106
+  },
+  {
+    "Ward": 1,
+    "Precinct": 7,
+    "Region": 1,
+    "WardPrecinct": 107
+  },
+  {
+    "Ward": 1,
+    "Precinct": 8,
+    "Region": 1,
+    "WardPrecinct": 108
+  },
+  {
+    "Ward": 1,
+    "Precinct": 9,
+    "Region": 1,
+    "WardPrecinct": 109
+  },
+  {
+    "Ward": 2,
+    "Precinct": 1,
+    "Region": 3,
+    "WardPrecinct": 201
+  },
+  {
+    "Ward": 2,
+    "Precinct": 2,
+    "Region": 3,
+    "WardPrecinct": 202
+  },
+  {
+    "Ward": 2,
+    "Precinct": 3,
+    "Region": 3,
+    "WardPrecinct": 203
+  },
+  {
+    "Ward": 2,
+    "Precinct": 4,
+    "Region": 3,
+    "WardPrecinct": 204
+  },
+  {
+    "Ward": 2,
+    "Precinct": 5,
+    "Region": 3,
+    "WardPrecinct": 205
+  },
+  {
+    "Ward": 2,
+    "Precinct": 6,
+    "Region": 3,
+    "WardPrecinct": 206
+  },
+  {
+    "Ward": 2,
+    "Precinct": 7,
+    "Region": 3,
+    "WardPrecinct": 207
+  },
+  {
+    "Ward": 3,
+    "Precinct": 1,
+    "Region": 1,
+    "WardPrecinct": 301
+  },
+  {
+    "Ward": 3,
+    "Precinct": 2,
+    "Region": 1,
+    "WardPrecinct": 302
+  },
+  {
+    "Ward": 3,
+    "Precinct": 3,
+    "Region": 1,
+    "WardPrecinct": 303
+  },
+  {
+    "Ward": 3,
+    "Precinct": 4,
+    "Region": 1,
+    "WardPrecinct": 304
+  },
+  {
+    "Ward": 3,
+    "Precinct": 5,
+    "Region": 2,
+    "WardPrecinct": 305
+  },
+  {
+    "Ward": 3,
+    "Precinct": 6,
+    "Region": 2,
+    "WardPrecinct": 306
+  },
+  {
+    "Ward": 3,
+    "Precinct": 7,
+    "Region": 2,
+    "WardPrecinct": 307
+  },
+  {
+    "Ward": 3,
+    "Precinct": 8,
+    "Region": 2,
+    "WardPrecinct": 308
+  },
+  {
+    "Ward": 4,
+    "Precinct": 1,
+    "Region": 2,
+    "WardPrecinct": 401
+  },
+  {
+    "Ward": 4,
+    "Precinct": 10,
+    "Region": 2,
+    "WardPrecinct": 410
+  },
+  {
+    "Ward": 4,
+    "Precinct": 2,
+    "Region": 2,
+    "WardPrecinct": 402
+  },
+  {
+    "Ward": 4,
+    "Precinct": 3,
+    "Region": 2,
+    "WardPrecinct": 403
+  },
+  {
+    "Ward": 4,
+    "Precinct": 4,
+    "Region": 2,
+    "WardPrecinct": 404
+  },
+  {
+    "Ward": 4,
+    "Precinct": 5,
+    "Region": 2,
+    "WardPrecinct": 405
+  },
+  {
+    "Ward": 4,
+    "Precinct": 6,
+    "Region": 2,
+    "WardPrecinct": 406
+  },
+  {
+    "Ward": 4,
+    "Precinct": 7,
+    "Region": 2,
+    "WardPrecinct": 407
+  },
+  {
+    "Ward": 4,
+    "Precinct": 8,
+    "Region": 2,
+    "WardPrecinct": 408
+  },
+  {
+    "Ward": 4,
+    "Precinct": 9,
+    "Region": 2,
+    "WardPrecinct": 409
+  },
+  {
+    "Ward": 5,
+    "Precinct": 1,
+    "Region": 2,
+    "WardPrecinct": 501
+  },
+  {
+    "Ward": 5,
+    "Precinct": 10,
+    "Region": 2,
+    "WardPrecinct": 510
+  },
+  {
+    "Ward": 5,
+    "Precinct": 11,
+    "Region": 2,
+    "WardPrecinct": 511
+  },
+  {
+    "Ward": 5,
+    "Precinct": 12,
+    "Region": 2,
+    "WardPrecinct": 512
+  },
+  {
+    "Ward": 5,
+    "Precinct": 2,
+    "Region": 2,
+    "WardPrecinct": 502
+  },
+  {
+    "Ward": 5,
+    "Precinct": 3,
+    "Region": 2,
+    "WardPrecinct": 503
+  },
+  {
+    "Ward": 5,
+    "Precinct": 4,
+    "Region": 2,
+    "WardPrecinct": 504
+  },
+  {
+    "Ward": 5,
+    "Precinct": 5,
+    "Region": 2,
+    "WardPrecinct": 505
+  },
+  {
+    "Ward": 5,
+    "Precinct": 6,
+    "Region": 2,
+    "WardPrecinct": 506
+  },
+  {
+    "Ward": 5,
+    "Precinct": 7,
+    "Region": 2,
+    "WardPrecinct": 507
+  },
+  {
+    "Ward": 5,
+    "Precinct": 8,
+    "Region": 2,
+    "WardPrecinct": 508
+  },
+  {
+    "Ward": 5,
+    "Precinct": 9,
+    "Region": 2,
+    "WardPrecinct": 509
+  },
+  {
+    "Ward": 6,
+    "Precinct": 1,
+    "Region": 3,
+    "WardPrecinct": 601
+  },
+  {
+    "Ward": 6,
+    "Precinct": 2,
+    "Region": 3,
+    "WardPrecinct": 602
+  },
+  {
+    "Ward": 6,
+    "Precinct": 3,
+    "Region": 3,
+    "WardPrecinct": 603
+  },
+  {
+    "Ward": 6,
+    "Precinct": 4,
+    "Region": 3,
+    "WardPrecinct": 604
+  },
+  {
+    "Ward": 6,
+    "Precinct": 5,
+    "Region": 3,
+    "WardPrecinct": 605
+  },
+  {
+    "Ward": 6,
+    "Precinct": 6,
+    "Region": 3,
+    "WardPrecinct": 606
+  },
+  {
+    "Ward": 6,
+    "Precinct": 7,
+    "Region": 3,
+    "WardPrecinct": 607
+  },
+  {
+    "Ward": 6,
+    "Precinct": 8,
+    "Region": 3,
+    "WardPrecinct": 608
+  },
+  {
+    "Ward": 6,
+    "Precinct": 9,
+    "Region": 3,
+    "WardPrecinct": 609
+  },
+  {
+    "Ward": 7,
+    "Precinct": 1,
+    "Region": 3,
+    "WardPrecinct": 701
+  },
+  {
+    "Ward": 7,
+    "Precinct": 10,
+    "Region": 4,
+    "WardPrecinct": 710
+  },
+  {
+    "Ward": 7,
+    "Precinct": 2,
+    "Region": 3,
+    "WardPrecinct": 702
+  },
+  {
+    "Ward": 7,
+    "Precinct": 3,
+    "Region": 3,
+    "WardPrecinct": 703
+  },
+  {
+    "Ward": 7,
+    "Precinct": 4,
+    "Region": 3,
+    "WardPrecinct": 704
+  },
+  {
+    "Ward": 7,
+    "Precinct": 5,
+    "Region": 3,
+    "WardPrecinct": 705
+  },
+  {
+    "Ward": 7,
+    "Precinct": 6,
+    "Region": 3,
+    "WardPrecinct": 706
+  },
+  {
+    "Ward": 7,
+    "Precinct": 7,
+    "Region": 3,
+    "WardPrecinct": 707
+  },
+  {
+    "Ward": 7,
+    "Precinct": 8,
+    "Region": 3,
+    "WardPrecinct": 708
+  },
+  {
+    "Ward": 7,
+    "Precinct": 9,
+    "Region": 3,
+    "WardPrecinct": 709
+  },
+  {
+    "Ward": 8,
+    "Precinct": 1,
+    "Region": 2,
+    "WardPrecinct": 801
+  },
+  {
+    "Ward": 8,
+    "Precinct": 2,
+    "Region": 2,
+    "WardPrecinct": 802
+  },
+  {
+    "Ward": 8,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 803
+  },
+  {
+    "Ward": 8,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 804
+  },
+  {
+    "Ward": 8,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 805
+  },
+  {
+    "Ward": 8,
+    "Precinct": 6,
+    "Region": 4,
+    "WardPrecinct": 806
+  },
+  {
+    "Ward": 8,
+    "Precinct": 7,
+    "Region": 4,
+    "WardPrecinct": 807
+  },
+  {
+    "Ward": 9,
+    "Precinct": 1,
+    "Region": 2,
+    "WardPrecinct": 901
+  },
+  {
+    "Ward": 9,
+    "Precinct": 2,
+    "Region": 2,
+    "WardPrecinct": 902
+  },
+  {
+    "Ward": 9,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 903
+  },
+  {
+    "Ward": 9,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 904
+  },
+  {
+    "Ward": 9,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 905
+  },
+  {
+    "Ward": 10,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1001
+  },
+  {
+    "Ward": 10,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1002
+  },
+  {
+    "Ward": 10,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1003
+  },
+  {
+    "Ward": 10,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1004
+  },
+  {
+    "Ward": 10,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1005
+  },
+  {
+    "Ward": 10,
+    "Precinct": 6,
+    "Region": 4,
+    "WardPrecinct": 1006
+  },
+  {
+    "Ward": 10,
+    "Precinct": 7,
+    "Region": 4,
+    "WardPrecinct": 1007
+  },
+  {
+    "Ward": 10,
+    "Precinct": 8,
+    "Region": 4,
+    "WardPrecinct": 1008
+  },
+  {
+    "Ward": 10,
+    "Precinct": 9,
+    "Region": 4,
+    "WardPrecinct": 1009
+  },
+  {
+    "Ward": 11,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1101
+  },
+  {
+    "Ward": 11,
+    "Precinct": 10,
+    "Region": 5,
+    "WardPrecinct": 1110
+  },
+  {
+    "Ward": 11,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1102
+  },
+  {
+    "Ward": 11,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1103
+  },
+  {
+    "Ward": 11,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1104
+  },
+  {
+    "Ward": 11,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1105
+  },
+  {
+    "Ward": 11,
+    "Precinct": 6,
+    "Region": 4,
+    "WardPrecinct": 1106
+  },
+  {
+    "Ward": 11,
+    "Precinct": 7,
+    "Region": 5,
+    "WardPrecinct": 1107
+  },
+  {
+    "Ward": 11,
+    "Precinct": 8,
+    "Region": 5,
+    "WardPrecinct": 1108
+  },
+  {
+    "Ward": 11,
+    "Precinct": 9,
+    "Region": 5,
+    "WardPrecinct": 1109
+  },
+  {
+    "Ward": 12,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1201
+  },
+  {
+    "Ward": 12,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1202
+  },
+  {
+    "Ward": 12,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1203
+  },
+  {
+    "Ward": 12,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1204
+  },
+  {
+    "Ward": 12,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1205
+  },
+  {
+    "Ward": 12,
+    "Precinct": 6,
+    "Region": 4,
+    "WardPrecinct": 1206
+  },
+  {
+    "Ward": 12,
+    "Precinct": 7,
+    "Region": 4,
+    "WardPrecinct": 1207
+  },
+  {
+    "Ward": 12,
+    "Precinct": 8,
+    "Region": 4,
+    "WardPrecinct": 1208
+  },
+  {
+    "Ward": 12,
+    "Precinct": 9,
+    "Region": 4,
+    "WardPrecinct": 1209
+  },
+  {
+    "Ward": 13,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1301
+  },
+  {
+    "Ward": 13,
+    "Precinct": 10,
+    "Region": 3,
+    "WardPrecinct": 1310
+  },
+  {
+    "Ward": 13,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1302
+  },
+  {
+    "Ward": 13,
+    "Precinct": 3,
+    "Region": 3,
+    "WardPrecinct": 1303
+  },
+  {
+    "Ward": 13,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1304
+  },
+  {
+    "Ward": 13,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1305
+  },
+  {
+    "Ward": 13,
+    "Precinct": 6,
+    "Region": 3,
+    "WardPrecinct": 1306
+  },
+  {
+    "Ward": 13,
+    "Precinct": 7,
+    "Region": 3,
+    "WardPrecinct": 1307
+  },
+  {
+    "Ward": 13,
+    "Precinct": 8,
+    "Region": 3,
+    "WardPrecinct": 1308
+  },
+  {
+    "Ward": 13,
+    "Precinct": 9,
+    "Region": 3,
+    "WardPrecinct": 1309
+  },
+  {
+    "Ward": 14,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1401
+  },
+  {
+    "Ward": 14,
+    "Precinct": 10,
+    "Region": 4,
+    "WardPrecinct": 1410
+  },
+  {
+    "Ward": 14,
+    "Precinct": 11,
+    "Region": 4,
+    "WardPrecinct": 1411
+  },
+  {
+    "Ward": 14,
+    "Precinct": 12,
+    "Region": 4,
+    "WardPrecinct": 1412
+  },
+  {
+    "Ward": 14,
+    "Precinct": 13,
+    "Region": 4,
+    "WardPrecinct": 1413
+  },
+  {
+    "Ward": 14,
+    "Precinct": 14,
+    "Region": 4,
+    "WardPrecinct": 1414
+  },
+  {
+    "Ward": 14,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1402
+  },
+  {
+    "Ward": 14,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1403
+  },
+  {
+    "Ward": 14,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1404
+  },
+  {
+    "Ward": 14,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1405
+  },
+  {
+    "Ward": 14,
+    "Precinct": 6,
+    "Region": 4,
+    "WardPrecinct": 1406
+  },
+  {
+    "Ward": 14,
+    "Precinct": 7,
+    "Region": 4,
+    "WardPrecinct": 1407
+  },
+  {
+    "Ward": 14,
+    "Precinct": 8,
+    "Region": 4,
+    "WardPrecinct": 1408
+  },
+  {
+    "Ward": 14,
+    "Precinct": 9,
+    "Region": 4,
+    "WardPrecinct": 1409
+  },
+  {
+    "Ward": 15,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1501
+  },
+  {
+    "Ward": 15,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1502
+  },
+  {
+    "Ward": 15,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1503
+  },
+  {
+    "Ward": 15,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1504
+  },
+  {
+    "Ward": 15,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1505
+  },
+  {
+    "Ward": 15,
+    "Precinct": 6,
+    "Region": 3,
+    "WardPrecinct": 1506
+  },
+  {
+    "Ward": 15,
+    "Precinct": 7,
+    "Region": 4,
+    "WardPrecinct": 1507
+  },
+  {
+    "Ward": 15,
+    "Precinct": 8,
+    "Region": 4,
+    "WardPrecinct": 1508
+  },
+  {
+    "Ward": 15,
+    "Precinct": 9,
+    "Region": 4,
+    "WardPrecinct": 1509
+  },
+  {
+    "Ward": 16,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1601
+  },
+  {
+    "Ward": 16,
+    "Precinct": 10,
+    "Region": 3,
+    "WardPrecinct": 1610
+  },
+  {
+    "Ward": 16,
+    "Precinct": 11,
+    "Region": 3,
+    "WardPrecinct": 1611
+  },
+  {
+    "Ward": 16,
+    "Precinct": 12,
+    "Region": 3,
+    "WardPrecinct": 1612
+  },
+  {
+    "Ward": 16,
+    "Precinct": 2,
+    "Region": 3,
+    "WardPrecinct": 1602
+  },
+  {
+    "Ward": 16,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1603
+  },
+  {
+    "Ward": 16,
+    "Precinct": 4,
+    "Region": 3,
+    "WardPrecinct": 1604
+  },
+  {
+    "Ward": 16,
+    "Precinct": 5,
+    "Region": 3,
+    "WardPrecinct": 1605
+  },
+  {
+    "Ward": 16,
+    "Precinct": 6,
+    "Region": 3,
+    "WardPrecinct": 1606
+  },
+  {
+    "Ward": 16,
+    "Precinct": 7,
+    "Region": 3,
+    "WardPrecinct": 1607
+  },
+  {
+    "Ward": 16,
+    "Precinct": 8,
+    "Region": 3,
+    "WardPrecinct": 1608
+  },
+  {
+    "Ward": 16,
+    "Precinct": 9,
+    "Region": 3,
+    "WardPrecinct": 1609
+  },
+  {
+    "Ward": 17,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1701
+  },
+  {
+    "Ward": 17,
+    "Precinct": 10,
+    "Region": 4,
+    "WardPrecinct": 1710
+  },
+  {
+    "Ward": 17,
+    "Precinct": 11,
+    "Region": 4,
+    "WardPrecinct": 1711
+  },
+  {
+    "Ward": 17,
+    "Precinct": 12,
+    "Region": 4,
+    "WardPrecinct": 1712
+  },
+  {
+    "Ward": 17,
+    "Precinct": 13,
+    "Region": 3,
+    "WardPrecinct": 1713
+  },
+  {
+    "Ward": 17,
+    "Precinct": 14,
+    "Region": 4,
+    "WardPrecinct": 1714
+  },
+  {
+    "Ward": 17,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1702
+  },
+  {
+    "Ward": 17,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1703
+  },
+  {
+    "Ward": 17,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1704
+  },
+  {
+    "Ward": 17,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1705
+  },
+  {
+    "Ward": 17,
+    "Precinct": 6,
+    "Region": 4,
+    "WardPrecinct": 1706
+  },
+  {
+    "Ward": 17,
+    "Precinct": 7,
+    "Region": 4,
+    "WardPrecinct": 1707
+  },
+  {
+    "Ward": 17,
+    "Precinct": 8,
+    "Region": 4,
+    "WardPrecinct": 1708
+  },
+  {
+    "Ward": 17,
+    "Precinct": 9,
+    "Region": 3,
+    "WardPrecinct": 1709
+  },
+  {
+    "Ward": 18,
+    "Precinct": 1,
+    "Region": 4,
+    "WardPrecinct": 1801
+  },
+  {
+    "Ward": 18,
+    "Precinct": 10,
+    "Region": 5,
+    "WardPrecinct": 1810
+  },
+  {
+    "Ward": 18,
+    "Precinct": 11,
+    "Region": 4,
+    "WardPrecinct": 1811
+  },
+  {
+    "Ward": 18,
+    "Precinct": 12,
+    "Region": 5,
+    "WardPrecinct": 1812
+  },
+  {
+    "Ward": 18,
+    "Precinct": 13,
+    "Region": 4,
+    "WardPrecinct": 1813
+  },
+  {
+    "Ward": 18,
+    "Precinct": 14,
+    "Region": 4,
+    "WardPrecinct": 1814
+  },
+  {
+    "Ward": 18,
+    "Precinct": 15,
+    "Region": 4,
+    "WardPrecinct": 1815
+  },
+  {
+    "Ward": 18,
+    "Precinct": 16,
+    "Region": 5,
+    "WardPrecinct": 1816
+  },
+  {
+    "Ward": 18,
+    "Precinct": 17,
+    "Region": 5,
+    "WardPrecinct": 1817
+  },
+  {
+    "Ward": 18,
+    "Precinct": 18,
+    "Region": 5,
+    "WardPrecinct": 1818
+  },
+  {
+    "Ward": 18,
+    "Precinct": 19,
+    "Region": 5,
+    "WardPrecinct": 1819
+  },
+  {
+    "Ward": 18,
+    "Precinct": 2,
+    "Region": 4,
+    "WardPrecinct": 1802
+  },
+  {
+    "Ward": 18,
+    "Precinct": 20,
+    "Region": 5,
+    "WardPrecinct": 1820
+  },
+  {
+    "Ward": 18,
+    "Precinct": 21,
+    "Region": 4,
+    "WardPrecinct": 1821
+  },
+  {
+    "Ward": 18,
+    "Precinct": 22,
+    "Region": 5,
+    "WardPrecinct": 1822
+  },
+  {
+    "Ward": 18,
+    "Precinct": 23,
+    "Region": 4,
+    "WardPrecinct": 1823
+  },
+  {
+    "Ward": 18,
+    "Precinct": 3,
+    "Region": 4,
+    "WardPrecinct": 1803
+  },
+  {
+    "Ward": 18,
+    "Precinct": 4,
+    "Region": 4,
+    "WardPrecinct": 1804
+  },
+  {
+    "Ward": 18,
+    "Precinct": 5,
+    "Region": 4,
+    "WardPrecinct": 1805
+  },
+  {
+    "Ward": 18,
+    "Precinct": 6,
+    "Region": 4,
+    "WardPrecinct": 1806
+  },
+  {
+    "Ward": 18,
+    "Precinct": 7,
+    "Region": 5,
+    "WardPrecinct": 1807
+  },
+  {
+    "Ward": 18,
+    "Precinct": 8,
+    "Region": 4,
+    "WardPrecinct": 1808
+  },
+  {
+    "Ward": 18,
+    "Precinct": 9,
+    "Region": 5,
+    "WardPrecinct": 1809
+  },
+  {
+    "Ward": 19,
+    "Precinct": 1,
+    "Region": 5,
+    "WardPrecinct": 1901
+  },
+  {
+    "Ward": 19,
+    "Precinct": 10,
+    "Region": 5,
+    "WardPrecinct": 1910
+  },
+  {
+    "Ward": 19,
+    "Precinct": 11,
+    "Region": 4,
+    "WardPrecinct": 1911
+  },
+  {
+    "Ward": 19,
+    "Precinct": 12,
+    "Region": 5,
+    "WardPrecinct": 1912
+  },
+  {
+    "Ward": 19,
+    "Precinct": 13,
+    "Region": 5,
+    "WardPrecinct": 1913
+  },
+  {
+    "Ward": 19,
+    "Precinct": 2,
+    "Region": 5,
+    "WardPrecinct": 1902
+  },
+  {
+    "Ward": 19,
+    "Precinct": 3,
+    "Region": 5,
+    "WardPrecinct": 1903
+  },
+  {
+    "Ward": 19,
+    "Precinct": 4,
+    "Region": 5,
+    "WardPrecinct": 1904
+  },
+  {
+    "Ward": 19,
+    "Precinct": 5,
+    "Region": 5,
+    "WardPrecinct": 1905
+  },
+  {
+    "Ward": 19,
+    "Precinct": 6,
+    "Region": 5,
+    "WardPrecinct": 1906
+  },
+  {
+    "Ward": 19,
+    "Precinct": 7,
+    "Region": 5,
+    "WardPrecinct": 1907
+  },
+  {
+    "Ward": 19,
+    "Precinct": 8,
+    "Region": 5,
+    "WardPrecinct": 1908
+  },
+  {
+    "Ward": 19,
+    "Precinct": 9,
+    "Region": 5,
+    "WardPrecinct": 1909
+  },
+  {
+    "Ward": 20,
+    "Precinct": 1,
+    "Region": 5,
+    "WardPrecinct": 2001
+  },
+  {
+    "Ward": 20,
+    "Precinct": 10,
+    "Region": 5,
+    "WardPrecinct": 2010
+  },
+  {
+    "Ward": 20,
+    "Precinct": 11,
+    "Region": 5,
+    "WardPrecinct": 2011
+  },
+  {
+    "Ward": 20,
+    "Precinct": 12,
+    "Region": 5,
+    "WardPrecinct": 2012
+  },
+  {
+    "Ward": 20,
+    "Precinct": 13,
+    "Region": 5,
+    "WardPrecinct": 2013
+  },
+  {
+    "Ward": 20,
+    "Precinct": 14,
+    "Region": 5,
+    "WardPrecinct": 2014
+  },
+  {
+    "Ward": 20,
+    "Precinct": 15,
+    "Region": 5,
+    "WardPrecinct": 2015
+  },
+  {
+    "Ward": 20,
+    "Precinct": 16,
+    "Region": 5,
+    "WardPrecinct": 2016
+  },
+  {
+    "Ward": 20,
+    "Precinct": 17,
+    "Region": 5,
+    "WardPrecinct": 2017
+  },
+  {
+    "Ward": 20,
+    "Precinct": 18,
+    "Region": 5,
+    "WardPrecinct": 2018
+  },
+  {
+    "Ward": 20,
+    "Precinct": 19,
+    "Region": 5,
+    "WardPrecinct": 2019
+  },
+  {
+    "Ward": 20,
+    "Precinct": 2,
+    "Region": 5,
+    "WardPrecinct": 2002
+  },
+  {
+    "Ward": 20,
+    "Precinct": 20,
+    "Region": 5,
+    "WardPrecinct": 2020
+  },
+  {
+    "Ward": 20,
+    "Precinct": 3,
+    "Region": 5,
+    "WardPrecinct": 2003
+  },
+  {
+    "Ward": 20,
+    "Precinct": 4,
+    "Region": 5,
+    "WardPrecinct": 2004
+  },
+  {
+    "Ward": 20,
+    "Precinct": 5,
+    "Region": 5,
+    "WardPrecinct": 2005
+  },
+  {
+    "Ward": 20,
+    "Precinct": 6,
+    "Region": 5,
+    "WardPrecinct": 2006
+  },
+  {
+    "Ward": 20,
+    "Precinct": 7,
+    "Region": 5,
+    "WardPrecinct": 2007
+  },
+  {
+    "Ward": 20,
+    "Precinct": 8,
+    "Region": 5,
+    "WardPrecinct": 2008
+  },
+  {
+    "Ward": 20,
+    "Precinct": 9,
+    "Region": 5,
+    "WardPrecinct": 2009
+  },
+  {
+    "Ward": 21,
+    "Precinct": 1,
+    "Region": 2,
+    "WardPrecinct": 2101
+  },
+  {
+    "Ward": 21,
+    "Precinct": 10,
+    "Region": 2,
+    "WardPrecinct": 2110
+  },
+  {
+    "Ward": 21,
+    "Precinct": 11,
+    "Region": 2,
+    "WardPrecinct": 2111
+  },
+  {
+    "Ward": 21,
+    "Precinct": 12,
+    "Region": 2,
+    "WardPrecinct": 2112
+  },
+  {
+    "Ward": 21,
+    "Precinct": 13,
+    "Region": 2,
+    "WardPrecinct": 2113
+  },
+  {
+    "Ward": 21,
+    "Precinct": 14,
+    "Region": 2,
+    "WardPrecinct": 2114
+  },
+  {
+    "Ward": 21,
+    "Precinct": 15,
+    "Region": 2,
+    "WardPrecinct": 2115
+  },
+  {
+    "Ward": 21,
+    "Precinct": 16,
+    "Region": 2,
+    "WardPrecinct": 2116
+  },
+  {
+    "Ward": 21,
+    "Precinct": 2,
+    "Region": 2,
+    "WardPrecinct": 2102
+  },
+  {
+    "Ward": 21,
+    "Precinct": 3,
+    "Region": 2,
+    "WardPrecinct": 2103
+  },
+  {
+    "Ward": 21,
+    "Precinct": 4,
+    "Region": 2,
+    "WardPrecinct": 2104
+  },
+  {
+    "Ward": 21,
+    "Precinct": 5,
+    "Region": 2,
+    "WardPrecinct": 2105
+  },
+  {
+    "Ward": 21,
+    "Precinct": 6,
+    "Region": 2,
+    "WardPrecinct": 2106
+  },
+  {
+    "Ward": 21,
+    "Precinct": 7,
+    "Region": 2,
+    "WardPrecinct": 2107
+  },
+  {
+    "Ward": 21,
+    "Precinct": 8,
+    "Region": 2,
+    "WardPrecinct": 2108
+  },
+  {
+    "Ward": 21,
+    "Precinct": 9,
+    "Region": 2,
+    "WardPrecinct": 2109
+  },
+  {
+    "Ward": 22,
+    "Precinct": 1,
+    "Region": 2,
+    "WardPrecinct": 2201
+  },
+  {
+    "Ward": 22,
+    "Precinct": 10,
+    "Region": 2,
+    "WardPrecinct": 2210
+  },
+  {
+    "Ward": 22,
+    "Precinct": 11,
+    "Region": 2,
+    "WardPrecinct": 2211
+  },
+  {
+    "Ward": 22,
+    "Precinct": 12,
+    "Region": 2,
+    "WardPrecinct": 2212
+  },
+  {
+    "Ward": 22,
+    "Precinct": 13,
+    "Region": 2,
+    "WardPrecinct": 2213
+  },
+  {
+    "Ward": 22,
+    "Precinct": 2,
+    "Region": 2,
+    "WardPrecinct": 2202
+  },
+  {
+    "Ward": 22,
+    "Precinct": 3,
+    "Region": 2,
+    "WardPrecinct": 2203
+  },
+  {
+    "Ward": 22,
+    "Precinct": 4,
+    "Region": 2,
+    "WardPrecinct": 2204
+  },
+  {
+    "Ward": 22,
+    "Precinct": 5,
+    "Region": 2,
+    "WardPrecinct": 2205
+  },
+  {
+    "Ward": 22,
+    "Precinct": 6,
+    "Region": 2,
+    "WardPrecinct": 2206
+  },
+  {
+    "Ward": 22,
+    "Precinct": 7,
+    "Region": 2,
+    "WardPrecinct": 2207
+  },
+  {
+    "Ward": 22,
+    "Precinct": 8,
+    "Region": 2,
+    "WardPrecinct": 2208
+  },
+  {
+    "Ward": 22,
+    "Precinct": 9,
+    "Region": 2,
+    "WardPrecinct": 2209
+  }
+]

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 92%;
+      width: 100%;
+    }
+    nav{
+      background-color:#00A6B4 !important;
+    }
+    .esri-view-height-medium .esri-popup .esri-popup-content {
+        max-height: 300px !important;
+        height: 221px;
+        width: 400px;
+        margin-left: 15px;
+        overflow: hidden;
+        /*overflow-y: hidden;*/
+        /*overflow: hidden;*/
+        /*width: 400px;*/
+    }
+    .esri-view-width-large .esri-popup .esri-popup-main {
+        width: 426px !important;
+    }
+    .esri-view-width-medium .esri-popup .esri-popup-main{
+      width: 426px !important;
+    }
+    .esri-view-width-xsmall .esri-popup .esri-docked-top-left .esri-popup-main .esri-popup-content, .esri-view-width-xsmall .esri-popup .esri-docked-top-center .esri-popup-main .esri-popup-content, .esri-view-width-xsmall .esri-popup .esri-docked-top-right .esri-popup-main .esri-popup-content, .esri-view-width-xsmall .esri-popup .esri-docked-bottom-left .esri-popup-main .esri-popup-content, .esri-view-width-xsmall .esri-popup .esri-docked-bottom-center .esri-popup-main .esri-popup-content, .esri-view-width-xsmall .esri-popup .esri-docked-bottom-right .esri-popup-main .esri-popup-content{
+
+        max-height: 260px !important;
+    }
+    .esri-popup .esri-popup-header .esri-title {
+      display: block !important;
+    }
+    #sliderContainer{
+      padding: 10px 42px 44px 42px;
+      background: rgba(0, 0, 0, 0.65);
+      position: relative;
+      bottom: 10%;
+
+    }
+    footer.page-footer {
+        margin-top: -92px !important;
+    }
+    #layerToggle {
+
+     padding: 20px;
+   }
+   .esri-ui-bottom-right{
+     /*position: relative;*/
+     z-index: 9;
+     bottom: 5% !important;
+     right: 2% !important;
+     border-radius: 2px !important;
+     opacity: 0.9;
+   }
+   .side-nav .collapsible-header {
+     border-top: 1px solid #ddd !important;
+   }
+   .collection-item.active{
+     background-color: #00A6B4;
+     color: white !important;
+   }
+   .collection-item.active:hover{
+     background-color: #00A6B4;
+     color: white;
+   }
+   [type="checkbox"].filled-in:checked+label:after {
+       top: 0;
+       width: 20px;
+       height: 20px;
+       border: 2px solid #00A6B4 !important;
+       background-color: #00A6B4 !important;
+       z-index: 0;
+   }
+   .minimize{
+      position: absolute;
+right: 10px;
+top: 10px;
+    }
+   .expand{
+      position: absolute;
+right: 10px;
+top: 10px;
+    }
+   .hidden{
+      display: none !important;
+    }
+    #slide-out{
+      width:200px !important;
+    }
+     #sidenav-overlay{
+       display: none !important;
+     }
+     .drag-target{
+       display: none !important;
+     }
+     .esri-legend {
+      overflow: hidden !important;
+
+      -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/AFCC9D01-AD11-724E-86B0-E7B4FC77BD18/main.js" charset="UTF-8"></script><script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <!-- <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"  media="screen,projection"/> -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"  media="screen,projection"/>
+    <script src="https://js.arcgis.com/4.1/"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+
+    <ul id="slide-out" class="side-nav fixed">
+      <li>
+        <a class="waves-effect" href="#!" id="leftNavBtn">Election Turnout</a>
+
+      </li>
+      <ul class="collapsible" data-collapsible="expandable">
+        <li>
+        <span id="layerToggle">
+          <!-- <form action="#"> -->
+              <input type="checkbox" class="filled-in" id="wards" checked="checked" />
+              <label for="wards">Wards</label>
+              <!-- </br>
+              <input type="checkbox" class="filled-in" id="precincts" checked="checked" />
+              <label for="precincts">Precincts</label> -->
+
+        <!-- </form> -->
+        </span>
+      </li>
+    <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li class="">
+            <a class="collapsible-header active">Mayoral<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body" style="display: none;">
+              <ul>
+                <ul class="collapsible collapsible-accordion">
+                  <li class="active">
+                    <a class="collapsible-header active">2013<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body" style="display: block;">
+                      <ul>
+                        <a href="#!" id="white2013" class="collection-item" style="color:black">White</a>
+                        <a href="#!" id="black2013" class="collection-item" style="color:black">Black</a>
+                        <a href="#!" id="hispanic2013" class="collection-item" style="color:black">Hispanic</a>
+                        <a href="#!" id="asian2013" class="collection-item" style="color:black">Asian</a>
+                        <a href="#!" id="mayor2013" class="collection-item active" style="color:black">All</a>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <a href="#!" id="mayor2005" class="collection-item">2005</a>
+                <a href="#!" id="mayor2009" class="collection-item">2009</a>
+                <!-- <a href="#!" id="mayor2013" class="collection-item">2013</a> -->
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <!-- <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">Presidential<i class="material-icons">arrow_drop_down</i></a>
+          <div class="collapsible-body">
+            <ul>
+              <a href="#!" id="" class="collection-item">2008</a>
+              <a href="#!" id="" class="collection-item">2012</a>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </li>
+    <li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+      <li>
+        <a class="collapsible-header">Governor<i class="material-icons">arrow_drop_down</i></a>
+        <div class="collapsible-body">
+          <ul>
+            <a href="#!" id="" class="collection-item">2007</a>
+            <a href="#!" id="" class="collection-item">2011</a>
+            <a href="#!" id="" class="collection-item active">2015</a>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li> -->
+  <li class="no-padding">
+  <ul class="collapsible collapsible-accordion">
+    <li>
+      <a class="collapsible-header">Races Map<i class="material-icons">arrow_drop_down</i></a>
+      <div class="collapsible-body">
+        <ul>
+          </br>
+          <a class="collection-item">
+
+            <div class="esri-legend__layer-body"><div class="esri-legend__layer-row"><div class="esri-legend__layer-cell esri-legend__layer-cell--symbols" style="width:24px"><div class="esri-legend__ramps"><div class="esri-legend__color-ramp " style="height: 50px;"><svg overflow="hidden" width="100%" height="50" style="touch-action: none;"><defs><linearGradient id="dojoxUnique1" gradientUnits="userSpaceOnUse" x1="0.00000000" y1="0.00000000" x2="0.00000000" y2="50.00000000"><stop offset="0.00000000" stop-color="rgb(53, 2, 66)" stop-opacity="1"></stop><stop offset="1.00000000" stop-color="rgb(255, 252, 212)" stop-opacity="1"></stop></linearGradient></defs><rect fill="url(#dojoxUnique1)" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="0" width="100%" height="50" ry="0" rx="0" fill-rule="evenodd"></rect></svg></div></div></div><div class="esri-legend__layer-cell esri-legend__layer-cell--info"><div class="esri-legend__ramp-labels" style="height: 50px;"><div class="esri-legend__ramp-label">&gt;80%</div><div class="esri-legend__ramp-label">&lt;1%</div></div></div></div></div>
+          </a>
+        </br>
+          <a href="#!" id="race_white" class="collection-item">White American</a>
+          <a href="#!" id="race_black" class="collection-item">African American</a>
+          <a href="#!" id="race_hispanic" class="collection-item">Hispanic Latino</a>
+          <a href="#!" id="race_asian" class="collection-item">Asian</a>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</li>
+
+<li class="no-padding">
+<ul class="collapsible collapsible-accordion">
+  <li>
+
+        <a href="#!" id="regions" class="collection-item">Regions</a>
+
+
+  </li>
+</ul>
+</li>
+      </ul>
+    </ul>
+    <nav>
+      <div class="nav-wrapper">
+        <!-- <a href="#" class="brand-logo center">Mayoral Election Turnout 2013</a> -->
+        <a href="#" data-activates="slide-out" class="button-collapse" class="brand-logo"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="#" class="brand-logo center">Mayoral Election Turnout 2013</a></li>
+          <li href="#" id="rightNavBtn"><a><i class="material-icons">more_vert</i></a></li>
+
+        </ul>
+      </div>
+      <ul id="slide-out-right" class="side-nav fixed">
+        <li><a class="waves-effect" id="legendTitle" href="#!">Mayoral Election 2013</a></li>
+        <li ><a class="waves-effect" id="wardprinct" href="#!">Ward Precinct</a></li>
+        <div class="esri-legend esri-widget esri-component" widgetid="esri_widgets_Legend_0" id="esri_widgets_Legend_0">
+
+          <div id="esri_widgets_Legend_0_157f2838770-object-0" class="esri-legend__service">
+
+
+
+             <div class="esri-legend__layer">
+                <div class="esri-legend__layer-table">
+                   <!-- <div class="esri-legend__layer-caption">Precentage Changed From Last Year</div> -->
+                   <div class="esri-legend__layer-body">
+                      <div class="esri-legend__layer-row">
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--symbols">
+                            <svg overflow="hidden" width="23" height="23">
+                               <defs></defs>
+                               <g transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,11.50000000,11.50000000)">
+                                  <path fill="rgb(0,166,180)" fill-opacity="0.7743055555555556" stroke="rgb(255, 255, 255)" stroke-opacity="0.29757625272331156" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 Z" d="M-10-10L 10 0L 10 10L-10 10L-10-10Z" fill-rule="evenodd" stroke-dasharray="none" dojogfxstrokestyle="solid"></path>
+                               </g>
+                            </svg>
+                         </div>
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--info" id="candidate1"> Walsh </div>
+                      </div>
+
+                      <div class="esri-legend__layer-row">
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--symbols">
+                            <svg overflow="hidden" width="23" height="23">
+                               <defs></defs>
+                               <g transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,11.50000000,11.50000000)">
+                                  <path fill="rgb(180, 14, 0)" fill-opacity="0.7743055555555556" stroke="rgb(255, 255, 255)" stroke-opacity="0.29757625272331156" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 Z" d="M-10-10L 10 0L 10 10L-10 10L-10-10Z" fill-rule="evenodd" stroke-dasharray="none" dojogfxstrokestyle="solid"></path>
+                               </g>
+                            </svg>
+                         </div>
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--info" id="candidate2"> Connolly </div>
+                      </div>
+
+                      <div class="esri-legend__layer-row">
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--symbols">
+                            <svg overflow="hidden" width="23" height="23">
+                               <defs></defs>
+                               <g transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,11.50000000,11.50000000)">
+                                  <path fill="rgb(169, 169, 169)" fill-opacity="0.7743055555555556" stroke="rgb(255, 255, 255)" stroke-opacity="0.29757625272331156" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 Z" d="M-10-10L 10 0L 10 10L-10 10L-10-10Z" fill-rule="evenodd" stroke-dasharray="none" dojogfxstrokestyle="solid"></path>
+                               </g>
+                            </svg>
+                         </div>
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--info"> Blanks </div>
+                      </div>
+                      <!-- <div class="esri-legend__layer-row">
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--symbols">
+                            <svg overflow="hidden" width="23" height="23">
+                               <defs></defs>
+                               <g transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,11.50000000,11.50000000)">
+                                  <path fill="rgb(255, 255, 0)" fill-opacity="0.7743055555555556" stroke="rgb(255, 255, 255)" stroke-opacity="0.29757625272331156" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 Z" d="M-10-10L 10 0L 10 10L-10 10L-10-10Z" fill-rule="evenodd" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></path>
+                               </g>
+                            </svg>
+                         </div>
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--info">Precincts</div>
+                      </div> -->
+                      <div class="esri-legend__layer-row">
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--symbols">
+                            <svg overflow="hidden" width="23" height="23">
+                               <defs></defs>
+                               <g transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,11.50000000,11.50000000)">
+                                  <path fill="rgb(241, 194, 50)" fill-opacity="0" stroke="rgb(241, 194, 50)" stroke-opacity="0.29757625272331156" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 Z" d="M-10-10L 10 0L 10 10L-10 10L-10-10Z" fill-rule="evenodd" stroke-dasharray="none" dojogfxstrokestyle="solid"></path>
+                               </g>
+                            </svg>
+                         </div>
+                         <div class="esri-legend__layer-cell esri-legend__layer-cell--info">Wards</div>
+                      </div>
+                   </div>
+                </div>
+                <div id="charts"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 350px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="350" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="350" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="67" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">2013 Election Turnout</text><rect x="67" y="19" width="216" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="218" y="48" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="218" y="48" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="57.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Votes</text></g><circle cx="223.5" cy="53.5" r="5.5" stroke="none" stroke-width="0" fill="#00a6b4"></circle></g></g><g><path d="M200,119.4L200,132.6A66,52.800000000000004,0,0,1,68,132.6L68,119.4A66,52.800000000000004,0,0,0,200,119.4" stroke="#007d87" stroke-width="1" fill="#007d87"></path><ellipse cx="134" cy="119.4" rx="66" ry="52.800000000000004" stroke="#00a6b4" stroke-width="1" fill="#00a6b4"></ellipse><text text-anchor="start" x="125" y="123.25" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">347</text></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Topping</th><th>Slices</th></tr></thead><tbody><tr><td>Candidate</td><td>NaN</td></tr><tr><td>Votes</td><td>347</td></tr><tr><td></td><td>NaN</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 360px; white-space: nowrap; font-family: Arial; font-size: 11px;">Votes</div><div></div></div></div>
+                <div id="age"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 350px; height: 220px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="350" height="220" aria-label="A chart." style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="350" height="220" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="67" y="24.5" font-family="Arial" font-size="10" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Age</text><rect x="67" y="16" width="216" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="216" y="42" width="67" height="106" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="216" y="42" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="50.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">0 - 5</text></g><circle cx="221" cy="47" r="5" stroke="none" stroke-width="0" fill="#3366cc"></circle></g><g><rect x="216" y="58" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="66.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">5 - 9</text></g><circle cx="221" cy="63" r="5" stroke="none" stroke-width="0" fill="#dc3912"></circle></g><g><rect x="216" y="74" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="82.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">10 - 14</text></g><circle cx="221" cy="79" r="5" stroke="none" stroke-width="0" fill="#ff9900"></circle></g><g><rect x="216" y="90" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="98.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">18 - 24</text></g><circle cx="221" cy="95" r="5" stroke="none" stroke-width="0" fill="#990099"></circle></g><g><rect x="216" y="106" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="114.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">25 - 34</text></g><circle cx="221" cy="111" r="5" stroke="none" stroke-width="0" fill="#0099c6"></circle></g><g><rect x="216" y="122" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="130.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">35 - 64</text></g><circle cx="221" cy="127" r="5" stroke="none" stroke-width="0" fill="#dd4477"></circle></g><g><rect x="216" y="138" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="146.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">65+</text></g><circle cx="221" cy="143" r="5" stroke="none" stroke-width="0" fill="#66aa00"></circle></g></g><g><path d="M134,103.4L134,116.60000000000001L155.46869232348368,66.6714414393071L155.46869232348368,53.47144143930711" stroke="#264d99" stroke-width="1" fill="#264d99"></path><path d="M134,103.4L134,50.6A66,52.800000000000004,0,0,1,155.46869232348368,53.47144143930711L134,103.4A0,0,0,0,0,134,103.4" stroke="#3366cc" stroke-width="1" fill="#3366cc"></path></g><g><path d="M134,103.4L134,116.60000000000001L176.4075092492372,76.14179907686758L176.4075092492372,62.94179907686759" stroke="#a52b0e" stroke-width="1" fill="#a52b0e"></path><path d="M134,103.4L155.46869232348368,53.47144143930711A66,52.800000000000004,0,0,1,176.4075092492372,62.94179907686759L134,103.4A0,0,0,0,0,134,103.4" stroke="#dc3912" stroke-width="1" fill="#dc3912"></path></g><g><path d="M134,103.4L134,116.60000000000001L194.06490906794218,94.71730621833102L194.06490906794218,81.51730621833102" stroke="#bf7300" stroke-width="1" fill="#bf7300"></path><path d="M134,103.4L176.4075092492372,62.94179907686759A66,52.800000000000004,0,0,1,194.06490906794218,81.51730621833102L134,103.4A0,0,0,0,0,134,103.4" stroke="#ff9900" stroke-width="1" fill="#ff9900"></path></g><g><path d="M200,103.4L200,116.60000000000001A66,52.800000000000004,0,0,1,199.03979202071866,125.57375565173587L199.03979202071866,112.37375565173586A66,52.800000000000004,0,0,0,200,103.4" stroke="#730073" stroke-width="1" fill="#730073"></path><path d="M134,103.4L134,116.60000000000001L199.03979202071866,125.57375565173587L199.03979202071866,112.37375565173586" stroke="#730073" stroke-width="1" fill="#730073"></path><path d="M134,103.4L194.06490906794218,81.51730621833102A66,52.800000000000004,0,0,1,199.03979202071866,112.37375565173586L134,103.4A0,0,0,0,0,134,103.4" stroke="#990099" stroke-width="1" fill="#990099"></path></g><g><path d="M199.03979202071866,112.37375565173586L199.03979202071866,125.57375565173587A66,52.800000000000004,0,0,1,174.21982029473776,158.46351962620633L174.21982029473776,145.26351962620632A66,52.800000000000004,0,0,0,199.03979202071866,112.37375565173586" stroke="#007395" stroke-width="1" fill="#007395"></path><path d="M134,103.4L134,116.60000000000001L174.21982029473776,158.4635196262063L174.21982029473776,145.26351962620632" stroke="#007395" stroke-width="1" fill="#007395"></path><path d="M134,103.4L199.03979202071866,112.37375565173586A66,52.800000000000004,0,0,1,174.21982029473776,145.26351962620632L134,103.4A0,0,0,0,0,134,103.4" stroke="#0099c6" stroke-width="1" fill="#0099c6"></path></g><g><path d="M134,103.4L134,116.60000000000001L84.02273496914816,82.11384760192816L84.02273496914816,68.91384760192815" stroke="#4d8000" stroke-width="1" fill="#4d8000"></path><path d="M134,103.4L84.02273496914816,68.91384760192815A66,52.800000000000004,0,0,1,134,50.6L134,103.4A0,0,0,0,0,134,103.4" stroke="#66aa00" stroke-width="1" fill="#66aa00"></path><text text-anchor="start" x="105.82786606459804" y="74.91038057558183" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">65+ </text></g><g><path d="M174.21982029473776,145.26351962620632L174.21982029473776,158.4635196262063A66,52.800000000000004,0,0,1,68,116.60000000000001L68,103.4A66,52.800000000000004,0,0,0,174.21982029473776,145.26351962620632" stroke="#a63359" stroke-width="1" fill="#a63359"></path><path d="M134,103.4L174.21982029473776,145.26351962620632A66,52.800000000000004,0,0,1,84.02273496914822,68.9138476019281L134,103.4A0,0,0,0,0,134,103.4" stroke="#dd4477" stroke-width="1" fill="#dd4477"></path><text text-anchor="start" x="89.06350659831804" y="127.44031492936661" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">35 - 64</text></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Topping</th><th>Slices</th></tr></thead><tbody><tr><td>0 - 5</td><td>113</td></tr><tr><td>5 - 9</td><td>125</td></tr><tr><td>10 - 14</td><td>152</td></tr><tr><td>15 - 17</td><td>NaN</td></tr><tr><td>18 - 24</td><td>204</td></tr><tr><td>25 - 34</td><td>254</td></tr><tr><td>35 - 64</td><td>1,002</td></tr><tr><td>65+ </td><td>293</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 230px; left: 360px; white-space: nowrap; font-family: Arial; font-size: 10px;">65+</div><div></div></div></div>
+                <div id="race"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 350px; height: 220px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="350" height="220" aria-label="A chart." style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="350" height="220" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="67" y="24.5" font-family="Arial" font-size="10" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Race</text><rect x="67" y="16" width="216" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="216" y="42" width="67" height="97" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="216" y="42" width="67" height="23" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="50.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">African</text><text text-anchor="start" x="230" y="63.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">American</text></g><circle cx="221" cy="47" r="5" stroke="none" stroke-width="0" fill="#ff9900"></circle></g><g><rect x="216" y="71" width="67" height="23" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="79.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">Hispanic</text><text text-anchor="start" x="230" y="92.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">Latino</text></g><circle cx="221" cy="76" r="5" stroke="none" stroke-width="0" fill="#109618"></circle></g><g><rect x="216" y="100" width="67" height="23" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="108.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">White</text><text text-anchor="start" x="230" y="121.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">American</text></g><circle cx="221" cy="105" r="5" stroke="none" stroke-width="0" fill="#990099"></circle></g><g><rect x="216" y="129" width="67" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="137.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">Other</text></g><circle cx="221" cy="134" r="5" stroke="none" stroke-width="0" fill="#cccccc"></circle></g></g><g><path d="M134,103.4L134,116.60000000000001L199.55332368206797,110.46750273462945L199.55332368206797,97.26750273462945" stroke="#bf7300" stroke-width="1" fill="#bf7300"></path><path d="M134,103.4L134,50.6A66,52.800000000000004,0,0,1,199.55332368206797,97.26750273462945L134,103.4A0,0,0,0,0,134,103.4" stroke="#ff9900" stroke-width="1" fill="#ff9900"></path></g><g><path d="M200,103.4L200,116.60000000000001A66,52.800000000000004,0,0,1,139.3059451206032,169.22909884922385L139.3059451206032,156.02909884922386A66,52.800000000000004,0,0,0,200,103.4" stroke="#0c7112" stroke-width="1" fill="#0c7112"></path><path d="M134,103.4L134,116.60000000000001L139.3059451206032,169.22909884922385L139.3059451206032,156.02909884922386" stroke="#0c7112" stroke-width="1" fill="#0c7112"></path><path d="M134,103.4L199.55332368206797,97.26750273462945A66,52.800000000000004,0,0,1,139.3059451206032,156.02909884922386L134,103.4A0,0,0,0,0,134,103.4" stroke="#109618" stroke-width="1" fill="#109618"></path></g><g><path d="M134,103.4L134,116.60000000000001L124.73526489570037,64.32280231873384L124.73526489570037,51.12280231873383" stroke="#999999" stroke-width="1" fill="#999999"></path><path d="M134,103.4L124.73526489570037,51.12280231873383A66,52.800000000000004,0,0,1,134,50.6L134,103.4A0,0,0,0,0,134,103.4" stroke="#cccccc" stroke-width="1" fill="#cccccc"></path></g><g><path d="M139.3059451206032,156.02909884922386L139.3059451206032,169.22909884922385A66,52.800000000000004,0,0,1,68,116.60000000000001L68,103.4A66,52.800000000000004,0,0,0,139.3059451206032,156.02909884922386" stroke="#730073" stroke-width="1" fill="#730073"></path><path d="M134,103.4L139.3059451206032,156.02909884922386A66,52.800000000000004,0,0,1,124.73526489570037,51.12280231873383L134,103.4A0,0,0,0,0,134,103.4" stroke="#990099" stroke-width="1" fill="#990099"></path></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Topping</th><th>Slices</th></tr></thead><tbody><tr><td>American Indian</td><td>1</td></tr><tr><td>Asian</td><td>34</td></tr><tr><td>African American</td><td>506</td></tr><tr><td>Hispanic Latino</td><td>559</td></tr><tr><td>White American</td><td>1,072</td></tr><tr><td>Other</td><td>14</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 230px; left: 360px; white-space: nowrap; font-family: Arial; font-size: 10px;">Other</div><div></div></div></div>
+                <div id="education"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 350px; height: 220px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="350" height="220" aria-label="A chart." style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="350" height="220" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="67" y="24.5" font-family="Arial" font-size="10" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Education</text><rect x="67" y="16" width="216" height="10" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="216" y="42" width="67" height="123" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="216" y="42" width="67" height="36" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="50.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">High</text><text text-anchor="start" x="230" y="63.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">School and</text><text text-anchor="start" x="230" y="76.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">Lower</text></g><circle cx="221" cy="47" r="5" stroke="none" stroke-width="0" fill="#3366cc"></circle></g><g><rect x="216" y="84" width="67" height="23" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="92.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">High</text><text text-anchor="start" x="230" y="105.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">School</text></g><circle cx="221" cy="89" r="5" stroke="none" stroke-width="0" fill="#dc3912"></circle></g><g><rect x="216" y="113" width="67" height="23" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="121.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">Some</text><text text-anchor="start" x="230" y="134.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">College</text></g><circle cx="221" cy="118" r="5" stroke="none" stroke-width="0" fill="#ff9900"></circle></g><g><rect x="216" y="142" width="67" height="23" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="230" y="150.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">Bachealer</text><text text-anchor="start" x="230" y="163.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#222222">and Higher</text></g><circle cx="221" cy="147" r="5" stroke="none" stroke-width="0" fill="#109618"></circle></g></g><g><path d="M134,103.4L134,116.60000000000001L169.2350021637131,71.95387409399551L169.2350021637131,58.75387409399551" stroke="#264d99" stroke-width="1" fill="#264d99"></path><path d="M134,103.4L134,50.6A66,52.800000000000004,0,0,1,169.2350021637131,58.75387409399551L134,103.4A0,0,0,0,0,134,103.4" stroke="#3366cc" stroke-width="1" fill="#3366cc"></path></g><g><path d="M200,103.4L200,116.60000000000001A66,52.800000000000004,0,0,1,184.71335048300753,150.39141744561908L184.71335048300753,137.1914174456191A66,52.800000000000004,0,0,0,200,103.4" stroke="#a52b0e" stroke-width="1" fill="#a52b0e"></path><path d="M134,103.4L134,116.60000000000001L184.71335048300753,150.39141744561908L184.71335048300753,137.1914174456191" stroke="#a52b0e" stroke-width="1" fill="#a52b0e"></path><path d="M134,103.4L169.2350021637131,58.75387409399551A66,52.800000000000004,0,0,1,184.71335048300753,137.1914174456191L134,103.4A0,0,0,0,0,134,103.4" stroke="#dc3912" stroke-width="1" fill="#dc3912"></path></g><g><path d="M73.9203041801793,125.25669911323766L73.9203041801793,138.45669911323765A66,52.800000000000004,0,0,1,68,116.60000000000001L68,103.4A66,52.800000000000004,0,0,0,73.9203041801793,125.25669911323766" stroke="#0c7112" stroke-width="1" fill="#0c7112"></path><path d="M134,103.4L134,116.60000000000001L73.9203041801793,138.45669911323765L73.9203041801793,125.25669911323766" stroke="#0c7112" stroke-width="1" fill="#0c7112"></path><path d="M134,103.4L73.9203041801793,125.25669911323766A66,52.800000000000004,0,0,1,134,50.6L134,103.4A0,0,0,0,0,134,103.4" stroke="#109618" stroke-width="1" fill="#109618"></path></g><g><path d="M184.71335048300753,137.1914174456191L184.71335048300753,150.39141744561908A66,52.800000000000004,0,0,1,73.9203041801793,138.45669911323768L73.9203041801793,125.25669911323766A66,52.800000000000004,0,0,0,184.71335048300753,137.1914174456191" stroke="#bf7300" stroke-width="1" fill="#bf7300"></path><path d="M134,103.4L184.71335048300753,137.1914174456191A66,52.800000000000004,0,0,1,73.9203041801793,125.25669911323766L134,103.4A0,0,0,0,0,134,103.4" stroke="#ff9900" stroke-width="1" fill="#ff9900"></path><text text-anchor="start" x="96.75049382995721" y="133.85842495928753" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">Some College</text></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Topping</th><th>Slices</th></tr></thead><tbody><tr><td>High School and Lower</td><td>223</td></tr><tr><td>High School</td><td>674</td></tr><tr><td>Some College</td><td>800</td></tr><tr><td>Bachealer and Higher</td><td>791</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 230px; left: 360px; white-space: nowrap; font-family: Arial; font-size: 10px;">and Higher</div><div></div></div></div>
+             </div>
+          </div>
+       </div>
+      </ul>
+      <a href="#" data-activates="slide-out-right" class="button-collapse-right"><i class="material-icons hidden">menu</i></a>
+    </nav>
+    <div id="viewDiv"></div>
+
+    <!-- <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a> -->
+    <!-- <footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer> -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+  </body>
+</html>
