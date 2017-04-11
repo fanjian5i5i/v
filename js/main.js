@@ -592,10 +592,15 @@ var black2013 = $("#black2013");
 var hispanic2013 = $("#hispanic2013");
 var asian2013 = $("#asian2013");
 var regionsCtrl = $("#regions");
+var region1Ctrl = $("#region1");
+var region2Ctrl = $("#region2");
+var region3Ctrl = $("#region3");
+var region4Ctrl = $("#region4");
+var region5Ctrl = $("#region5");
 // var regionLayer = new GraphicsLayer({id:"regions"});
 var regionLayer = new FeatureLayer({
           id:"regions",
-          url: "http://mapservices.bostonredevelopmentauthority.org/arcproxy/arcgis/rest/services/Maps/Regions/MapServer/0",
+          url: "http://mapservices.bostonredevelopmentauthority.org/arcgis/rest/services/Maps/Regions/MapServer/0",
           opacity:0.8
         });
 regionsCtrl.on("click",function(e){
@@ -682,6 +687,55 @@ regionsCtrl.on("click",function(e){
     regionsCtrl.addClass("active");
   }
 
+});
+
+
+region1Ctrl.on("click",function(e){
+  e.preventDefault();
+  drawChartAge(regionDemo[0]);
+  drawChartRace(regionDemo[0]);
+  drawChartEduction(regionDemo[0]);
+});
+
+region2Ctrl.on("click",function(e){
+  e.preventDefault();
+  drawChartAge(regionDemo[1]);
+  drawChartRace(regionDemo[1]);
+  drawChartEduction(regionDemo[1]);
+});
+region3Ctrl.on("click",function(e){
+  e.preventDefault();
+  drawChartAge(regionDemo[2]);
+  drawChartRace(regionDemo[2]);
+  drawChartEduction(regionDemo[2]);
+});
+region4Ctrl.on("click",function(e){
+  e.preventDefault();
+  drawChartAge(regionDemo[3]);
+  drawChartRace(regionDemo[3]);
+  drawChartEduction(regionDemo[3]);
+});
+region5Ctrl.on("click",function(e){
+  e.preventDefault();
+  drawChartAge(regionDemo[4]);
+  drawChartRace(regionDemo[4]);
+  drawChartEduction(regionDemo[4]);
+});
+
+
+var regionToggle = dom.byId("regionToggle");
+on(regionToggle, "change", function() {
+        // fl2.visible = wardsCtrl.checked;
+
+        if(regionToggle.checked){
+          map.add(regionLayer);
+          map.add(labelRegionLayer);
+        }else{
+          map.remove(regionLayer);
+          map.remove(labelRegionLayer);
+        }
+
+        // console.log("changed");
 });
 
   $('#rightNavBtn').on("click",function(e){
